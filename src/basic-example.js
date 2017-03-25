@@ -50,17 +50,3 @@ const Topic = ({match}) => (
 )
 
 export default BasicExample
-
-
-
-
-
-
-
-
-
-
-
-
-
-
