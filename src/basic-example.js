@@ -31,11 +31,22 @@ const About = () => (
 const Topics = ({match}) => (
   <div>
     <h2>Topics {console.log(match)} </h2>
+    <ul>
+      <li><Link to={`${match.url}/some-topic-one`}>Some Topic one</Link></li>
+      <li><Link to={`${match.url}/some-topic-two`}>Some Topic two</Link></li>
+      <li><Link to={`${match.url}/some-topic-three`}>Some Topic three</Link></li>
+      <li><Link to={`${match.url}/some-topic-four`}>Some Topic four</Link></li>
+    </ul>
+    <Route path={`${match.url}/:topicId`} component={Topic} />
+    <Route exact path={`${match.url}`} render={()=> <h4>choose somethind</h4>}/>
   </div>
 )
 
-const Topic = () => (
-  <h2>Topic</h2>
+const Topic = ({match}) => (
+  <div>
+    <h2>Topic</h2>
+    <p>{match.params.topicId}</p>
+  </div>
 )
 
 export default BasicExample
