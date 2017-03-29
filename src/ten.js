@@ -11,17 +11,22 @@ let Nav = () =>
   </nav>
 
 // render multiple components for the same route 
+const Header = () =>  
+  <div>
+    <Route path="/:page" render={({match})=> <h2>{match.params.page} header</h2>}/>
+  </div>
+
+const Content = () => 
+  <div>
+    <Route path="/:page" render={({match})=> <h2>{match.params.page} content</h2>}/>
+  </div>
 
 const App = () => (
   <Router>
     <div>
       <Nav />
-      <div>
-        <Route path="/:page" render={({match})=> <h2>{match.params.page} header</h2>}/>
-      </div>
-      <div>
-        <Route path="/:page" render={({match})=> <h2>{match.params.page} content</h2>}/>
-      </div>
+      <Header /> 
+      <Content /> 
     </div>
   </Router>
 )
