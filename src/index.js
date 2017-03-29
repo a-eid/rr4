@@ -1,11 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import BE from './basic-example'
-import UP from './url-params'
-
+import './app.css'
+// import App from './first';
+// import App from './second';
+// import App from './four';
+// import App from './six';
+// import App from './seven';
+// import App from './eight';
+import App from './ten';
 
 ReactDOM.render(
-  <UP />,
+  <App />,
   document.getElementById('root')
 );

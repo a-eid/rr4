@@ -1,17 +1,6 @@
 import React , {Component} from 'react' 
 import {BrowserRouter as Router , Route , NavLink } from 'react-router-dom'
 
-const Home = ()=>(
-  <h1> Home </h1>
-)
-
-const About = ()=>(
-  <h1> About </h1>
-)
-
-const Contact = ()=>(
-  <h1>Contact</h1>
-)
 
 const Nav = () => (
   <nav>
@@ -35,3 +24,15 @@ export default class App extends Component {
   }
 }
 
+
+const Home = ()=>(
+  <h1> Home </h1>
+)
+
+const About = ()=>(
+  <h1> About </h1>
+)
+
+const Contact = ()=>(
+  <h1>Contact</h1>
+)
