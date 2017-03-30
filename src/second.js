@@ -1,6 +1,6 @@
 import React from 'react'
-import {BrowserRouter as Router , Route , Link} from 'react-router-dom'
-// replace => restore prev history entry with this one . 
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+// replace => restore prev history entry with this one .
 
 const Links = (
   <nav>
@@ -11,18 +11,18 @@ const Links = (
   </nav>
 )
 
-const Home = ()=> <h1>Home</h1>
-const About = ()=> <h1>About</h1>
-const AboutUs = ()=> <h1>About Us</h1>
+const Home = () => <h1>Home</h1>
+const About = () => <h1>About</h1>
+// const AboutUs = () => <h1>About Us</h1>
 
-const App = ()=>(
+const App = () => (
   <Router>
     <div>
       {Links}
-      <Route exact path="/" component={Home} /> 
-      <Route exact path="/about" component={About} /> 
-      <Route exact path="/about/us" render={()=> <h2>About us</h2>} />
-      <Route path="/about/me" children={({match})=> match && <h2>About me</h2>} /> 
+      <Route exact path='/' component={Home} />
+      <Route exact path='/about' component={About} />
+      <Route exact path='/about/us' render={() => <h2>About us</h2>} />
+      <Route path='/about/me' children={({match}) => match && <h2>About me</h2>} />
     </div>
   </Router>
 )

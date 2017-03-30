@@ -1,22 +1,22 @@
 import React from 'react'
-import {BrowserRouter as Router , Route , Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
 const BasicExample = () => (
   <Router>
     <div>
       <Nav />
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/topics" component={Topics} />
+      <Route exact path='/' component={Home} />
+      <Route path='/about' component={About} />
+      <Route path='/topics' component={Topics} />
     </div>
   </Router>
 )
 
 const Nav = () => (
   <div>
-    <Link to="/" > Home </Link> 
-    <Link to="/about" > About </Link>
-    <Link to="/topics" > Topics </Link>
+    <Link to='/' > Home </Link>
+    <Link to='/about' > About </Link>
+    <Link to='/topics' > Topics </Link>
   </div>
 )
 
@@ -38,7 +38,7 @@ const Topics = ({match}) => (
       <li><Link to={`${match.url}/some-topic-four`}>Some Topic four</Link></li>
     </ul>
     <Route path={`${match.url}/:topicId`} component={Topic} />
-    <Route exact path={`${match.url}`} render={()=> <h4>choose somethind</h4>}/>
+    <Route exact path={`${match.url}`} render={() => <h4>choose somethind</h4>} />
   </div>
 )
 

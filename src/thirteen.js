@@ -14,8 +14,8 @@ class Form extends Component{
     }
   }
 
-  setDirty = (e)=> {
-    console.log(e.target.value.length)
+  setDirty = (e) => {
+    // console.log(e.target.value.length)
     this.setState({
       dirty: e.target.value.length > 0 ? true : false 
     })
